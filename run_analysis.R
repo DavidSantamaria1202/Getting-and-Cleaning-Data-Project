@@ -149,6 +149,11 @@ completeData <- group_by(completeData,subject,activity)
 
 #Create a new tidy data frame with the mean of each variable per subject and activity
 summaryDataFrame <- summarise_all(completeData,.funs = mean)
+
+#In this part of the code the dataset will be converted into tidy by spliting the operations
+# some of them were means and other standard deviations, thus a column calles operation is
+# added to identify which values are means and which are standard deviations
+
 idNames <- names(summaryDataFrame)[1:2]
 meassureNames <- names(summaryDataFrame)[3:68]
 summaryDataFrame <- melt(as.data.frame(summaryDataFrame),id=idNames,measure.vars = meassureNames)
@@ -157,12 +162,14 @@ summaryDataFrame <- mutate(summaryDataFrame,operation = operation)
 
 summaryDataFrame <- mutate(summaryDataFrame,variable = gsub("Mean","",variable))
 summaryDataFrame <- mutate(summaryDataFrame,variable = gsub("StandardDeviation","",variable))
-
 summaryDataFrame <- group_by(summaryDataFrame,subject,activity,operation)
 summaryDataFrame <- arrange(summaryDataFrame,operation)
+
+# Rename and rearange the variables (columns)
 names(summaryDataFrame) <- c("subject","activity","meassurement","value","operation")
 summaryDataFrame <-summaryDataFrame[,c(1,2,5,3,4)]
 
+#Give once again the name of the activity for each index
 summaryDataFrame<-mutate(summaryDataFrame,activity=join(summaryDataFrame,activities,by="activity")$description)
 
 #Write the table into a new txt 
