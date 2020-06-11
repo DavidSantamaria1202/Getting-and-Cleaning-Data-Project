@@ -166,7 +166,7 @@ summaryDataFrame <- group_by(summaryDataFrame,subject,activity,operation)
 summaryDataFrame <- arrange(summaryDataFrame,operation)
 
 # Rename and rearange the variables (columns)
-names(summaryDataFrame) <- c("subject","activity","meassurement","value","operation")
+names(summaryDataFrame) <- c("subject","activity","measurement","value","operation")
 summaryDataFrame <-summaryDataFrame[,c(1,2,5,3,4)]
 
 #Give once again the name of the activity for each index
