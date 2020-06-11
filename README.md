@@ -3,11 +3,11 @@ This repository contains the script, README and code book for the Getting and Cl
 
 Content of this repository:
 
-    1. README file explaining the R script and explaining why the last table created is tidy.
-    2. There is only one script on this repository, this accomplishes the tasks of downloading, reading, selecting and rearranging the 
-       data from the original .zip file
-    3. Codebook for the tidy data frame created, describing the variables and its possible values.
-    4. A tidy data which summarizes the fata obtained from the train and test experimental results.
+   1. README file explaining the R script and explaining why the last table created is tidy.
+   2. There is only one script on this repository, this accomplishes the tasks of downloading, reading, selecting and rearranging the 
+      data from the original .zip file
+   3. Codebook for the tidy data frame created, describing the variables and its possible values.
+   4. A tidy data which summarizes the fata obtained from the train and test experimental results.
 
 In this README file I will explain the process made to achieve the task requested by the project, this task was to create a new tidy data set which had the mean of all variables (Those that had the mean or standard deviation of a measure) per activity (for example: WALKING) and per subject (there are a total of 30 subjects in the study).
 
