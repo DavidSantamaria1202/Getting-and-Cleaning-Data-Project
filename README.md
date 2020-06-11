@@ -13,8 +13,8 @@ In this README file I will explain the process made to achieve the task requeste
 
 The R script code is divided in two main sections
 
-    1. Retrieving the data
-    2. Manipulating the data
+   1. Retrieving the data
+   2. Manipulating the data
 
 The first one goes from line 1 until 108, the second one from 109 to 176
 
@@ -30,13 +30,13 @@ The standard procedure is the same for the three cases, here the data is read an
 
 The steps of the standard procedure are the following:
 
-    1. Extract the name of the files within the folders test and train
-    2. Extract only the files that are .txt within the folders test and train, with help of grep function in the namesTest and         
-       namesTrain variables.
-    3. Extracts the name of the files but without the .txt, this to use those names as the names of the list elements that will be    
-       created.
-    4. Create a null list that will contain the tables read from the .txt files
-    5. in a for loop the .txt files are read and saved in a element in the list with the same name of the file but without the ".txt"
+   1. Extract the name of the files within the folders test and train
+   2. Extract only the files that are .txt within the folders test and train, with help of grep function in the namesTest and         
+      namesTrain variables.
+   3. Extracts the name of the files but without the .txt, this to use those names as the names of the list elements that will be    
+      created.
+   4. Create a null list that will contain the tables read from the .txt files
+   5. in a for loop the .txt files are read and saved in a element in the list with the same name of the file but without the ".txt"
     
 This procedure is the same for the three if cases, after this we will have two lists one with test data (lisTest) and other with train data (listTrain). Then we go to the second part of the code, where data will be cleaned and arranged.
 
