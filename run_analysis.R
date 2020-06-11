@@ -175,6 +175,6 @@ names(summaryDataFrame) <- c("subject","activity","measurement","value","operati
 summaryDataFrame <-summaryDataFrame[,c(1,2,5,3,4)]
 
 #Write the table into a new txt 
-write.table(summaryDataFrame,file="summary activity track.txt",sep=",")
+write.table(summaryDataFrame,file="summary activity track.txt",sep=",",row.names=FALSE)
 
 
