@@ -83,8 +83,6 @@ in order to create this new data frame the following steps were done:
   6. Erase the word Mean and Standard deviation from the measurement name.
   7. Group the summaryDataFrame by subject,activity and operation.
   8. Arrange the summaryDataFrame by operation (first half mean and second half standard deviations)
-  9. Assign the description of the activity to the activity index since making summaryDataFrama as dataframe will lose the operation of 
-     assignin the name to the index of activity that we did earlier.
-  10. Write a table with the new data frame
+  9. Write a table with the new data frame
   
 In order to write the table, please use: read.table("summary activity track.txt",sep=",")
